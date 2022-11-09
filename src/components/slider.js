@@ -516,10 +516,12 @@ function slider() {
   const next = document.querySelector('.itcss__control_next');
   const prev = document.querySelector('.itcss__control_prev');
 
-  prev.addEventListener('click', () => {
+  prev.addEventListener('click', (event) => {
+    event.preventDefault();
     sliderConfig.prev();
   })
-  next.addEventListener('click', () => {
+  next.addEventListener('click', (event) => {
+    event.preventDefault();
     sliderConfig.next();
   })
 }
