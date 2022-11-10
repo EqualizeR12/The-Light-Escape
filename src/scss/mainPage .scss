@@ -7,16 +7,91 @@
   }
 }
 
-.block {
-  height: 400px;
-
-}
-
 .title-game {
+  width: $container;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 30px auto;
+
+  @include media-max-width(700px) {
+    width: 100%;
+  }
+
+  .title-game__logo {
+    margin: 0 auto;
+    animation: animationTitle 2.5s forwards ease-out;
+
+    @include media-max-width(900px) {
+      width: 80%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @keyframes animationTitle {
+    from{
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .background-resin {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+
+  .background-light {
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+    animation: animationLight 2.5s forwards ease-out;
+
+    img {
+      width: 100%;
+    }
+
+    @keyframes animationLight {
+      from {
+        scale: 0.95;
+      }
+      to {
+        scale: 1;
+      }
+    }
+
+    .background-light__paw {
+      position: absolute;
+      top: calc(100% + 30%);
+      left: 70%;
+      transform: translate(-50%, -50%);
+      width: 50%;
+
+      animation: animationPaw 2.5s forwards ease-out;
+    }
+
+    @keyframes animationPaw {
+      from {
+        top: calc(100% + 30%);
+        left: 60%;
+        scale: 1;
+      }
+      to {
+        top: 62%;
+        left: 50%;
+        scale: 0.7;
+      }
+    }
+  }
 
   img {
     margin: 0 auto;
@@ -26,16 +101,6 @@
     }
   }
 }
-
-// h1 {
-//   width: 60%;
-//   font-size: 42px;
-//   font-weight: bold;
-//   color: yellow;
-//   border: 2px solid yellow;
-//   margin: 0 auto;
-//   text-align: center;
-// }
 
 h3 {
   width: 60%;
@@ -98,7 +163,6 @@ h6 {
       width: 230px;
       height: 110px;
     }
-  
 
     .download-text {
       color: #f9f28d;
@@ -108,12 +172,10 @@ h6 {
       @include media-max-width(700px) {
         font-size: 26px;
       }
-    
     }
   }
 
   .download-android {
-
     img {
       @include media-max-width(700px) {
         width: 60px;
@@ -129,18 +191,18 @@ h6 {
   flex-direction: row;
 
   @include media-max-width(1200px) {
-    max-width: 80%;  
+    max-width: 80%;
     margin: 30px auto;
-}
+  }
 
   @include media-max-width(900px) {
-    max-width: 100%;  
+    max-width: 100%;
     margin: 30px 0;
-}
+  }
 
-@include media-max-width(700px) {
-  flex-direction: column;
-}
+  @include media-max-width(700px) {
+    flex-direction: column;
+  }
 }
 
 .descr-info__text {
