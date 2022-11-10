@@ -10,7 +10,6 @@ function slider() {
    * Licensed under MIT (https://github.com/itchief/ui-components/blob/master/LICENSE)
    */
 
-
   class ItcSimpleSlider {
     // базовые классы и селекторы
     static PREFIX = "itcss";
@@ -509,21 +508,52 @@ function slider() {
 
   let sliderConfig = new ItcSimpleSlider(".itcss", {
     autoplay: true,
-    interval: 3000,
+    interval: 5000,
     swipe: true,
   });
 
-  const next = document.querySelector('.itcss__control_next');
-  const prev = document.querySelector('.itcss__control_prev');
+  // frameBorder.addEventListener("mousedown", (e) => {
+  //   console.log("down", e.clientX);
+  //   if (e.clientX > 300) {
+  //     sliderConfig.next();
+  //   }
+  // });
 
-  prev.addEventListener('click', (event) => {
+  //here we connect prev next metgod to uor custom html button
+  const next = document.querySelector(".itcss__control_next");
+  const prev = document.querySelector(".itcss__control_prev");
+
+  prev.addEventListener("click", (event) => {
     event.preventDefault();
     sliderConfig.prev();
-  })
-  next.addEventListener('click', (event) => {
+  });
+  next.addEventListener("click", (event) => {
     event.preventDefault();
     sliderConfig.next();
-  })
+  });
+
+  /*this code need because our frame 
+  on slider with higher z index(we can not swipe) and 
+  we connect to frame on slider and check swipe 
+  left or right */
+  //for mobile devices
+  const frameBorder = document.querySelector(".frame-slider");
+  let touchstartX = 0;
+  let touchendX = 0;
+
+  function checkDirection() {
+    if (touchendX < touchstartX) sliderConfig.next();
+    if (touchendX > touchstartX) sliderConfig.prev();
+  }
+
+  frameBorder.addEventListener("touchstart", (e) => {
+    touchstartX = e.changedTouches[0].screenX;
+  });
+
+  frameBorder.addEventListener("touchend", (e) => {
+    touchendX = e.changedTouches[0].screenX;
+    checkDirection();
+  });
 }
 
 module.exports = slider;
