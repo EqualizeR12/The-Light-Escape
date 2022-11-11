@@ -2,6 +2,10 @@ let mainPage = require("./components/component");
 
 let scrollPow = require("./components/scrollPow.js");
 
-mainPage();
+let firefly = require("./components/firefly.js");
 
 mainPage();
+
+scrollPow();
+
+firefly();
