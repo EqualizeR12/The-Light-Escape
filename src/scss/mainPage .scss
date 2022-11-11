@@ -70,10 +70,89 @@
   .background-light {
     position: relative;
     width: 80%;
+    height: 50%;
     overflow: hidden;
+    vertical-align: middle;
+    text-align: center;
     animation: animationLight 2.5s forwards ease-out;
 
-    img {
+    .lighters1 {
+      width: 10px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: animationLighters 7s linear infinite;
+    }
+
+    .lighters2 {
+      width: 15px;
+      position: absolute;
+      top: 30%;
+      left: 30%;
+      animation: animationLighters 9s linear infinite;
+    }
+
+    .lighters3 {
+      width: 20px;
+      position: absolute;
+      top: 30%;
+      left: 70%;
+      animation: animationLighters 15s ease-in infinite;
+    }
+
+    .lighters4 {
+      width: 10px;
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: animationLighters 10s ease-in infinite;
+    }
+
+    .lighters5 {
+      width: 20px;
+      position: absolute;
+      top: 15%;
+      left: 20%;
+      transform: translate(-50%, -50%);
+      animation: animationLighters 5s ease-in infinite;
+    }
+
+    .lighters6 {
+      width: 20px;
+      position: absolute;
+      top: 10%;
+      left: 60%;
+      transform: translate(-50%, -50%);
+      animation: animationLighters 10s ease-in infinite;
+    }
+
+    @keyframes animationLighters {
+      0% {
+        transform: translateY(0px);
+        scale: 0.5;
+      }
+
+      50% {
+        transform: translateY(40px) translateX(-20px);
+        scale: 0.7;
+        opacity: 0.2;
+      }
+
+      80% {
+        transform: translateY(60px) translateX(20px);
+        scale: 0.2;
+      }
+
+      100% {
+        transform: translateY(0px);
+        scale: 0.5;
+        opacity: 1;
+      }
+    }
+
+    .background-light__portal {
       width: 100%;
     }
 
@@ -88,7 +167,7 @@
 
     .background-light__paw {
       position: absolute;
-      top: calc(100% + 32%);
+      top: calc(100% + 52%);
       left: 70%;
       transform: translate(-50%, -50%);
       width: 50%;
@@ -116,7 +195,7 @@
         scale: 0.7;
       }
       to {
-        top: calc(100% + 30%);
+        top: calc(100% + 52%);
         left: 60%;
         scale: 1;
       }
@@ -152,7 +231,7 @@ h3 {
     height: calc(100% + 43%);
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 51%;
     transform: translate(-50%, -50%);
 
     @include media-min-width(1000px) {
