@@ -1,5 +1,5 @@
-@import "./variables.scss";
-@import "./footer.scss";
+@import './variables.scss';
+@import './footer.scss';
 
 @mixin media-max-width($width) {
   @media (max-width: $width) {
@@ -23,6 +23,47 @@
 
   @include media-max-width(700px) {
     width: 100%;
+  }
+
+  .title-game__language {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    animation: animationTitle 2.5s forwards ease-out;
+
+    @include media-max-width(1000px) {
+      top: 0;
+      right: 0;
+    }
+    
+    @include media-max-width(550px) {
+      display: flex;
+      flex-direction: row;
+    }
+
+    a {
+      text-decoration: none;
+      color: #f9f28d;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 10px;
+
+      @include media-max-width(1000px) {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+      @include media-max-width(550px) {
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 5px;
+      }
+    }
   }
 
   .title-game__logo {
@@ -152,7 +193,7 @@ h3 {
     height: calc(100% + 43%);
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 52%;
     transform: translate(-50%, -50%);
 
     @include media-min-width(1000px) {
