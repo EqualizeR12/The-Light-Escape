@@ -15,6 +15,46 @@
   justify-content: center;
   align-items: center;
 
+  .monster-eyes1 {
+    width: 100px;
+    opacity: 1;
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    animation: 2s eyesMonster ease-in infinite;
+  }
+  .monster-eyes2 {
+    width: 100px;
+    opacity: 1;
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    animation: 4s eyesMonster ease-in infinite;
+  }
+  .monster-eyes3 {
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    animation: 3s eyesMonster ease-in forwards;
+  }
+  @keyframes eyesMonster {
+    100% {
+      opacity: 0;
+      transform: rotate(0deg);
+    }
+    50% {
+      opacity: 1;
+    }
+    0% {
+      opacity: 0;
+      transform: rotate(5deg);
+    }
+  }
+
   .load-progress__percentage {
     position: absolute;
     top: 5%;
