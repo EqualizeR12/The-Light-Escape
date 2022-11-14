@@ -16,16 +16,16 @@
   align-items: center;
 
   .monster-eyes1 {
-    width: 250px;
+    width: 100px;
     opacity: 1;
     position: absolute;
-    top: 10%;
+    top: 15%;
     left: 40%;
     transform: translate(-50%, -50%);
     animation: 2s eyesMonster ease-in infinite;
   }
   .monster-eyes2 {
-    width: 250px;
+    width: 100px;
     opacity: 1;
     position: absolute;
     top: 70%;
@@ -34,10 +34,10 @@
     animation: 4s eyesMonster ease-in infinite;
   }
   .monster-eyes3 {
-    width: 200px;
+    width: 100px;
     position: absolute;
     top: 50%;
-    left: 70%;
+    left: 80%;
     transform: translate(-50%, -50%);
     animation: 3s eyesMonster ease-in forwards;
   }
