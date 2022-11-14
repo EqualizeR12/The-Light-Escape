@@ -1,3 +1,9 @@
+@mixin media-max-width($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
 .preloader {
   transition: all 1s;
   position: fixed;
@@ -20,7 +26,7 @@
     opacity: 1;
     position: absolute;
     top: 15%;
-    left: 40%;
+    left: 30%;
     transform: translate(-50%, -50%);
     animation: 2s eyesMonster ease-in infinite;
   }
@@ -28,18 +34,22 @@
     width: 100px;
     opacity: 1;
     position: absolute;
-    top: 70%;
-    left: 10%;
+    top: 85%;
+    left: 15%;
     transform: translate(-50%, -50%);
     animation: 4s eyesMonster ease-in infinite;
   }
   .monster-eyes3 {
     width: 100px;
     position: absolute;
-    top: 50%;
+    top: 65%;
     left: 80%;
     transform: translate(-50%, -50%);
-    animation: 3s eyesMonster ease-in forwards;
+    animation: 3s eyesMonster ease-in infinite;
+    @include media-max-width(600px) {
+      left: 70%;
+      top: 70%;
+    }
   }
   @keyframes eyesMonster {
     100% {
@@ -47,11 +57,12 @@
       transform: rotate(0deg);
     }
     50% {
-      opacity: 1;
+      opacity: 0.7;
+      transform: rotate(10deg);
     }
     0% {
       opacity: 0;
-      transform: rotate(5deg);
+      transform: rotate(0deg);
     }
   }
 
@@ -115,7 +126,7 @@
   }
 
   .preloader-scene {
-    width: 55%;
+    width: 90%;
     position: relative;
 
     .preloader-scene__image {
@@ -123,6 +134,10 @@
       left: 50%;
       transform: translate(-50%, -50%);
       width: 65%;
+
+      @include media-max-width(600px) {
+        width: 90%;
+      }
     }
 
     .preloader-image__monster {
@@ -133,16 +148,20 @@
       width: 25%;
       animation: monsterAnimation 2s both infinite;
 
+      @include media-max-width(600px) {
+        margin-top: 17%;
+      }
+
       @keyframes monsterAnimation {
         from {
           left: 85%;
-          filter: blur(2px);
+          filter: blur(1px);
         }
 
         to {
           left: 15%;
           opacity: 0;
-          filter: blur(20px);
+          filter: blur(4px);
         }
       }
     }
