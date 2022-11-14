@@ -117,7 +117,7 @@
     text-align: center;
     animation: animationLight 2.5s forwards ease-out;
 
-    .lighters1 {
+    .background-light-lighters1 {
       width: 6px;
       position: absolute;
       top: 50%;
@@ -126,7 +126,7 @@
       animation: animationLighters 7s linear infinite;
     }
 
-    .lighters2 {
+    .background-light-lighters2 {
       width: 9px;
       position: absolute;
       top: 30%;
@@ -134,7 +134,7 @@
       animation: animationLighters 9s linear infinite;
     }
 
-    .lighters3 {
+    .background-light-lighters3 {
       width: 5px;
       position: absolute;
       top: 30%;
@@ -142,7 +142,7 @@
       animation: animationLighters 15s ease-in infinite;
     }
 
-    .lighters4 {
+    .background-light-lighters4 {
       width: 10px;
       position: absolute;
       top: 70%;
@@ -151,16 +151,16 @@
       animation: animationLighters 10s ease-in infinite;
     }
 
-    .lighters5 {
+    .background-light-lighters5 {
       width: 7px;
       position: absolute;
-      top: 15%;
+      top: 18%;
       left: 20%;
       transform: translate(-50%, -50%);
       animation: animationLighters 5s ease-in infinite;
     }
 
-    .lighters6 {
+    .background-light-lighters6 {
       width: 10px;
       position: absolute;
       top: 10%;
