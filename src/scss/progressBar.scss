@@ -2,8 +2,13 @@
   position: fixed;
   top: 0;
   width: 0%;
-  height: 6px;
+  height: 4px;
   z-index: 1100;
+  
+  -webkit-box-shadow: 0px 0px 60px 13px rgba(255, 255, 255,1);
+  -moz-box-shadow: 0px 0px 60px 13px rgba(255, 255, 255,1);
+  box-shadow: 0px 0px 60px 13px rgba(255, 255, 255,1);
+
   background: linear-gradient(270deg, #feda75,  #fa7e1e, #d629);
   background-size: 400% 400%;
   -webkit-animation: AnimationName 3s ease infinite;

@@ -75,8 +75,8 @@ module.exports = {
       template: "./public/index.html",
 
       excludeChunks: [],
-
-      chunks: ["main", "mailer", "autoScroll", "burgerMenu", "sliderPage"],
+      // "mailer", "autoScroll", "burgerMenu"
+      chunks: ["main", "sliderPage"],
     }),
   ],
 };
