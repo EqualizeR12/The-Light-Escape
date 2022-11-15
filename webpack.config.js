@@ -15,6 +15,8 @@ module.exports = {
     autoScroll: path.resolve(__dirname, "./src/auto-scroll.js"),
     burgerMenu: path.resolve(__dirname, "./src/burger-menu.js"),
     sliderPage: path.resolve(__dirname, "./src/slider.js"),
+    
+    createArticle:  path.resolve(__dirname, "./src/createArticle.js"),
   },
 
   output: {
@@ -77,6 +79,25 @@ module.exports = {
       excludeChunks: [],
       // "mailer", "autoScroll", "burgerMenu"
       chunks: ["main", "sliderPage"],
+    }),
+    
+
+    new HtmlWebpackPlugin({
+      filename: "index_ENG.html",
+      template: "./public/index_ENG.html",
+
+      excludeChunks: [],
+      // "mailer", "autoScroll", "burgerMenu"
+      chunks: ["main", "sliderPage"],
+    }),
+
+    new HtmlWebpackPlugin({
+      filename: "createArticle.html",
+      template: "./public/blogStatic/createArticle.html",
+
+      excludeChunks: [],
+      // "mailer", "autoScroll", "burgerMenu"
+      chunks: ["createArticle"],
     }),
   ],
 };
