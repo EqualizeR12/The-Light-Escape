@@ -1,4 +1,5 @@
 "use strict";
+require("../scss/firefly.scss");
 
 function firefly() {
   let countLighters = 26;
