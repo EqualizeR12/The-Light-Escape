@@ -1,3 +1,9 @@
+@mixin media-max-width($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
 .social-networks {
   display: flex;
   flex-direction: column;
@@ -5,12 +11,17 @@
   justify-content: center;
 
   width: 50%;
-  margin: 0 auto;
+  margin: 30px auto;
 
   h2 {
     color: #ffffff;
     font-size: 32px;
     text-align: center;
+    margin: 10px;
+
+    @include media-max-width(700px) {
+      font-size: 24px;
+    }
   }
 
   .social-networks__block-networks {
