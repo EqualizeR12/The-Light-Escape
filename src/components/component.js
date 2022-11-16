@@ -1,6 +1,5 @@
 require("../scss/mainPage .scss");
 require("../scss/index.scss");
-require("../scss/firefly.scss");
 require("../scss/social-networks.scss");
 
 // const {ItcSimpleSlider} = require("./slider");
