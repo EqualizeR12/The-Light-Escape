@@ -372,6 +372,8 @@ h6 {
   margin: 30px auto;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  text-align: center;
 
   @include media-max-width(1200px) {
     max-width: 80%;
@@ -444,7 +446,8 @@ h6 {
 .parag {
   font-size: 22px;
   font-weight: bold;
-  width: 80%;
+  text-align: center;
+  width: 70%;
   margin: 0 auto;
   color: #ffffff;
 
