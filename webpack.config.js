@@ -11,9 +11,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: {
     main: path.resolve(__dirname, "./src/index.js"),
-    mailer: path.resolve(__dirname, "./src/mailer.js"),
-    autoScroll: path.resolve(__dirname, "./src/auto-scroll.js"),
-    burgerMenu: path.resolve(__dirname, "./src/burger-menu.js"),
     sliderPage: path.resolve(__dirname, "./src/slider.js"),
     
     createArticle:  path.resolve(__dirname, "./src/createArticle.js"),
