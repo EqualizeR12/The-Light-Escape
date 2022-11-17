@@ -13,8 +13,8 @@
 
   background: #ffffff;
   opacity: 0.8;
-  box-shadow: 0px -10px 20px 4px rgba(255, 255, 255, 0.8);
-// background: #939796;
+  // box-shadow: 0px -10px 20px 4px rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 60px 13px white;
 
   @include media-max-width(450px) {
     flex-direction: column;
