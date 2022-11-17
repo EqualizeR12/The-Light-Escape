@@ -205,6 +205,10 @@
 
     .background-light__portal {
       width: 100%;
+
+      @include media-min-width(1600px) {
+        width: 70%;
+      }
     }
 
     @keyframes animationLight {
@@ -224,6 +228,10 @@
       width: 50%;
 
       animation: animationPaw 2.5s forwards ease-out;
+
+      @include media-min-width(1600px) {
+        width: 35%;
+      }
     }
 
     @keyframes animationPaw {
@@ -281,14 +289,14 @@
   background: no-repeat url('../assets/horizontal_frame.png');
   background-size: 100%, auto, contain;
 
-  @include media-max-width(500px) {
+  @include media-max-width(550px) {
     width: 400px;
     height: 280px;
   }
 
   @include media-max-width(400px) {
-    width: 330px;
-    height: 240px;
+    width: 300px;
+    height: 215px;
   }
 
   .description-game__parag {
@@ -356,15 +364,15 @@ h6 {
 
     .download-text {
       color: #ffffff;
-      font-size: 32px;
+      font-size: 28px;
       font-weight: bold;
 
       @include media-max-width(700px) {
-        font-size: 20px;
+        font-size: 18px;
       }
 
       @include media-max-width(400px) {
-        font-size: 17px;
+        font-size: 15px;
       }
     }
   }
@@ -413,6 +421,10 @@ h6 {
     .descr-info__title {
       color: #ffffff;
       font-size: 28px;
+
+      @include media-max-width(400px) {
+        font-size: 22px;
+      }
     }
 
     .descr-info__img {

@@ -25,6 +25,7 @@
 
   @include media-max-width(700px) {
     margin: 20px auto 40px;
+    font-size: 24px;
   }
 
   // margin: 20px auto 10px auto;
@@ -37,31 +38,68 @@
 
   .frame-slider__border {
     z-index: 10;
-    width: 95%;
+    width: 850px;
+    // width: 95%;
     // width: 0;
     height: calc(100% + 43%);
     position: absolute;
     left: 50%;
-    top: 51%;
+    top: 52%;
     transform: translate(-50%, -50%);
 
-    @include media-min-width(1000px) {
-      width: 900px;
-      // width: 0;
+    @include media-max-width(1000px) {
+      width: 700px;
+      height: 500px;
+    }
+
+    @include media-max-width(700px) {
+      width: 500px;
+      height: 370px;
+    }
+
+    @include media-max-width(550px) {
+      width: 400px;
+      height: 300px;
+    }
+
+    @include media-max-width(400px) {
+      width: 350px;
+      height: 250px;
     }
   }
 }
 
 .itcss {
   position: relative;
-  max-width: 80%;
+  // max-width: 80%;
+  width: 675px;
   height: 100%;
 
   margin-right: auto;
   margin-left: auto;
 
-  @include media-min-width(1000px) {
-    max-width: 700px
+  // @include media-min-width(1000px) {
+  //   max-width: 700px
+  // }
+
+  @include media-max-width(1000px) {
+    width: 580px;
+    height: 345px;
+  }
+
+  @include media-max-width(700px) {
+    width: 407px;
+    height: 255px;
+  }
+
+  @include media-max-width(550px) {
+    width: 327px;
+    height: 209px;
+  }
+
+  @include media-max-width(400px) {
+    width: 283px;
+    height: 173px;
   }
 }
 
@@ -94,8 +132,18 @@
     height: 266px;
   }
 
+  // @include media-max-width(400px) {
+  //   height: 75%;
+  // }
+
+  @include media-max-width(550px) {
+    width: 327px;
+    height: 209px;
+  }
+
   @include media-max-width(400px) {
-    height: 75%;
+    width: 283px;
+    height: 173px;
   }
 }
 
