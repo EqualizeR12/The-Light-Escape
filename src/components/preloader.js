@@ -11,7 +11,7 @@ function preloader() {
     setTimeout(() => {
       for (let i = 1; i <= 10; i++) {
         loadBar.style.width = `${i + 10}0%`;
-        console.log(loadBar.style.width);
+        // console.log(loadBar.style.width);
       }
     }, 500);
 
