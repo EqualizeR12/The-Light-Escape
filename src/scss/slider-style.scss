@@ -259,16 +259,29 @@
   background-color: rgba(0, 0, 0, 0.49);
   border-radius: 50%;
   z-index: 11;
+
+  @include media-max-width(1000px) {
+    height: 30px;
+    width: 30px;
+  }
 }
 
 .itcss__control_prev {
-  left: 5%;
+  left: 6%;
   padding: 5px 8px 5px 5px;
+
+  @include media-max-width(1000px) {
+  left: 8%;
+  }
 }
 
 .itcss__control_next {
-  left: 95%;
+  left: 94%;
   padding: 5px 5px 5px 8px;
+  
+  @include media-max-width(1000px) {
+    left: 92%;
+    }
 }
 
 .image-prev,
