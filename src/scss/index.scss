@@ -17,6 +17,8 @@ body {
   padding: 0;
   font-family: 'LC Chalk', sans-serif;
   background-color: #000002;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
 }
 
 h1,
