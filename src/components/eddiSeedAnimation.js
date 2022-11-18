@@ -7,59 +7,91 @@ function seedEddiAnimation() {
   let isMobile = window.innerWidth <= 450;
   let positionScroll;
 
+  function controlAnimaton({
+    className = seed,
+    startPosition = "200px",
+    marginDirection = true,
+    opacity = "0",
+    transition = "1s",
+  }) {
+    marginDirection
+      ? (className.style.marginRight = startPosition)
+      : (className.style.marginLeft = startPosition);
+    className.style.opacity = opacity;
+    className.style.transition = transition;
+  }
+
   window.addEventListener("scroll", () => {
     positionScroll =
       (window.scrollY / (document.body.clientHeight - window.innerHeight)) *
       100;
-   
-      //for mobile
+
+    //for mobile
     if (isMobile) {
-      seed.style.marginRight = "700px";
-      seed.style.opacity = "0";
-      seed.style.transition = "1s";
+      controlAnimaton({});  //sid initial position
 
-      eddi.style.marginLeft = "700px";
-      eddi.style.opacity = "0";
-      eddi.style.transition = "1s";
+      controlAnimaton({
+        className: eddi,
+        marginDirection: false,
+      });
 
+      //display eddi and sid on mobile
       if (positionScroll > 27) {
-        seed.style.marginRight = "0px";
-        seed.style.opacity = "1";
+        controlAnimaton({
+          className: seed,
+          startPosition: "0px",
+          marginDirection: true,
+          opacity: "1",
+        });
       }
 
       if (positionScroll > 57) {
-        eddi.style.marginLeft = "0px";
-        eddi.style.opacity = "1";
+        controlAnimaton({
+          className: eddi,
+          startPosition: "0px",
+          marginDirection: false,
+          opacity: "1",
+        });
       }
       // console.log(positionScroll, isMobile, "mobile device");
-      return
+      return;
     } else {
-      seed.style.marginRight = "700px";
-      seed.style.opacity = "0";
-      seed.style.transition = "1s";
-      eddi.style.marginLeft = "700px";
-      eddi.style.opacity = "0";
-      eddi.style.transition = "1s";
-      console.log(positionScroll, isMobile, "desctop device");
+      //animation for desctop
+      controlAnimaton({}); //sid initial position
+
+      controlAnimaton({
+        className: eddi,
+        marginDirection: false,
+      });
+
+      //scroll for desctop
+      if (positionScroll > 75 && !isMobile) {
+        //display eddi seed on desktop
+        controlAnimaton({
+          className: seed,
+          startPosition: "0px",
+          marginDirection: true,
+          opacity: "1",
+        });
+
+        controlAnimaton({
+          className: eddi,
+          startPosition: "0px",
+          marginDirection: false,
+          opacity: "1",
+        });
+      }
+
+      //hide eddi and sid on desctop
+      if (positionScroll < 76) {
+        controlAnimaton({}); //sid initial position
+
+        controlAnimaton({
+          className: eddi,
+          marginDirection: false,
+        });
+      }
     }
-    
-    //for desctop
-    if (positionScroll > 75 && !isMobile) {
-      seed.style.marginRight = "0px";
-      seed.style.opacity = "1";
-
-      eddi.style.marginLeft = "0px";
-      eddi.style.opacity = "1";
-    }
-
-    if (positionScroll < 76) {
-      seed.style.marginRight = "700px";
-      seed.style.opacity = "0";
-
-      eddi.style.marginLeft = "700px";
-      eddi.style.opacity = "0";
-    }
-
     // console.log(positionScroll, isMobile);
   });
 }
