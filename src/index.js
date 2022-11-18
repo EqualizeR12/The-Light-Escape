@@ -8,6 +8,8 @@ let progressBar = require("./components/progressBar.js");
 
 let preloader = require("./components/preloader.js");
 
+let seedEddiScroll = require("./components/eddiSeedAnimation.js");
+
 
 mainPage();
 
@@ -18,3 +20,5 @@ firefly();
 progressBar();
 
 preloader();
+
+seedEddiScroll();

@@ -1,4 +1,4 @@
 h1{font-size:100px}
 
-@font-face{font-family:LC Chalk;src:url(4ad07cbe2a26b02d87f2.woff)}html{box-sizing:border-box;position:relative}body{margin:0;padding:0;font-family:'LC Chalk', sans-serif;background-color:#000002}h1,h2,h3,h4,h5,h6{margin:0;padding:0}*,*::before,*::after{box-sizing:border-box}::-webkit-scrollbar{width:0px;height:0px}.container{width:80%;margin:0 auto}
+@font-face{font-family:LC Chalk;src:url(4ad07cbe2a26b02d87f2.woff)}html{box-sizing:border-box;position:relative}body{margin:0;padding:0;font-family:'LC Chalk', sans-serif;background-color:#000002;-webkit-overflow-scrolling:touch;overflow-x:hidden}h1,h2,h3,h4,h5,h6{margin:0;padding:0}*,*::before,*::after{box-sizing:border-box}::-webkit-scrollbar{width:0px;height:0px}.container{width:80%;margin:0 auto}
 
