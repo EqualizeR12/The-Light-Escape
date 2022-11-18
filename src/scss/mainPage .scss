@@ -77,15 +77,22 @@
   }
 
   .title-game__logo {
+    display: flex;
+    align-items: center;
+    width: 70%;
     margin: 0 auto;
     animation: animationTitle 2.5s forwards ease-out;
 
-    @include media-max-width(900px) {
-      width: 95%;
-    }
+    // @include media-max-width(900px) {
+    //   width: 95%;
+    // }
 
     img {
-      width: 100%;
+      width: 80%;
+
+      @include media-max-width(900px) {
+        width: 95%;
+      }
     }
   }
 
@@ -206,7 +213,7 @@
     .background-light__portal {
       width: 100%;
 
-      @include media-min-width(1600px) {
+      @include media-min-width(1400px) {
         width: 70%;
       }
     }
@@ -229,7 +236,7 @@
 
       animation: animationPaw 2.5s forwards ease-out;
 
-      @include media-min-width(1600px) {
+      @include media-min-width(1400px) {
         width: 35%;
       }
     }
