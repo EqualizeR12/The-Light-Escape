@@ -19,6 +19,11 @@ body {
   background-color: #000002;
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
+  cursor: url(../assets/cursor/cursor.cur), auto;
+}
+
+a {
+  cursor: url(../assets/cursor/cursor_on.cur), pointer;
 }
 
 h1,
