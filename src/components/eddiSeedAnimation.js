@@ -9,7 +9,7 @@ function seedEddiAnimation() {
 
   function controlAnimaton({
     className = seed,
-    startPosition = "200px",
+    startPosition = "300px",
     marginDirection = true,
     opacity = "0",
     transition = "1s",
@@ -53,7 +53,6 @@ function seedEddiAnimation() {
           opacity: "1",
         });
       }
-      // console.log(positionScroll, isMobile, "mobile device");
       return;
     } else {
       //animation for desctop
@@ -92,7 +91,6 @@ function seedEddiAnimation() {
         });
       }
     }
-    // console.log(positionScroll, isMobile);
   });
 }
 
